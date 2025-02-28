@@ -18,3 +18,20 @@ This is a simple Student Management System built using **Java Swing** and **MySQ
 - Run the SQL script `student_db.sql` to set up the database.
   ```sh
   mysql -u root -p < student_db.sql
+
+### 2. Configure Database Connection
+Open StudentManagementSystem.java
+Update the JDBC URL, username, and password in the connectToDatabase() method.
+
+### 3. Build and Run
+# Using Maven:
+mvn compile
+mvn exec:java -Dexec.mainClass="StudentManagementSystem"
+
+# Using Gradle:
+gradle build
+java -cp build/classes/java/main StudentManagementSystem
+
+# Using Java Directly:
+javac StudentManagementSystem.java
+java StudentManagementSystem
